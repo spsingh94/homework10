@@ -3,7 +3,7 @@
 Developers are often tasked with creating interfaces that make it easy for non-developers to view and interact with information stored in databases. Often these interfaces are known as **C**ontent **M**anagement **S**ystems. In this homework assignment, your challenge is to architect and build a solution for managing a company's employees using node, inquirer, and MySQL.
 
 ## Instructions
-
+<!-- done -->
 Design the following database schema containing three tables:
 
 ![Database Schema](Assets/schema.png)
@@ -27,7 +27,9 @@ Design the following database schema containing three tables:
   * **last_name** - VARCHAR(30) to hold employee last name
   * **role_id** - INT to hold reference to role employee has
   * **manager_id** - INT to hold reference to another employee that manager of the current employee. This field may be null if the employee has no manager
-  
+  <!-- done -->
+
+
 Build a command-line application that at a minimum allows the user to:
 
   * Add departments, roles, employees
@@ -73,9 +75,9 @@ How do you deliver this? Here are some guidelines:
 ![Employee Tracker](Assets/employee-tracker.gif)
 
 ### Hints
-
+<!-- done -->
 * You may wish to include a `seed.sql` file to pre-populate your database. This will make development of individual features much easier.
-
+<!-- done -->
 * Focus on getting the basic functionality completed before working on more advanced features.
 
 * Review the week's activities for a refresher on MySQL.
