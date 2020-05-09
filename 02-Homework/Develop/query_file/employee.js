@@ -1,25 +1,5 @@
 //file made for organizing SQL functions
 const mysql = require("mysql");
-// class Employee {
-//     constructor(name, department, role) {
-//         this.name = name,
-//             this.department = department,
-//             this.role = role
-//     }
-//     //make functions for sql queries
-
-
-
-//     getName() {
-//         return this.name;
-//     }
-//     getDepartment() {
-//         return this.department
-//     }
-//     getRole() {
-//         return this.role
-//     }
-// }
 
 var connection = mysql.createConnection({
     host: "localhost",

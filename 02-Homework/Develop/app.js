@@ -1,61 +1,48 @@
 const db = require("./query_file/employee");
 const inquirer = require("inquirer");
 
-// var connection = mysql.createConnection({
-//     host: "localhost",
-//     port: 3306,
-//     user: "root",
-//     password: "kansascity41",
-//     database: "employee_db"
-//   });
-  
-//   connection.connect(function(err) {
-//     if (err) throw err;
-//     console.log("connected!");
-//   });
-
-  
- async  function addEmployee(){
-var roles = await db.getRoles();
-console.log(roles);
-    var employee = inquirer.prompt([{
-      type: "input",
-      name: "firstName",
-      message: "What is the employees first name?"
-    },{
-      type: "input",
-      name: "lastName",
-      message: "What is the employees last name?"
-    },{
-      type: "list",
-      name: "role",
-      message: "What is the employees role?",
-      choices: [{name: "sales", value: "1"}]
-    }
-  ])
-    // await db.createEmployee(employee);
-    // console.log("employee created");
+async function addEmployee() {
+  var roles = await db.getRoles();
+  console.log(roles);
+  var employee = inquirer.prompt([{
+    type: "input",
+    name: "firstName",
+    message: "What is the employees first name?"
+  }, {
+    type: "input",
+    name: "lastName",
+    message: "What is the employees last name?"
+  }, {
+    type: "list",
+    name: "role",
+    message: "What is the employees role?",
+    choices: [{ name: "Marketing", value: "1" }, { name: "Sales", value: "2" },
+    { name: "HR", value: "3" }, { name: "Accounting", value: "4" }]
   }
+  ])
+}
 
-  function init(){
-    inquirer.prompt([{
-      type: "list",
-      message: "What would you like to do?",
-      name: "value",
-      choices: [{name: "Add an employee", value: "addEmployee"}]
-    }]).then(function(choices){
+function init() {
+  inquirer.prompt([{
+    type: "list",
+    message: "What would you like to do?",
+    name: "value",
+    choices: [{ name: "Add an employee", value: "addEmployee" }, { name: "Add an employee", value: "addEmployee" },
+    { name: "Add an employee", value: "addEmployee" }, { name: "Add an employee", value: "addEmployee" },
+    { name: "Add an employee", value: "addEmployee" },{ name: "Add an employee", value: "addEmployee" }]
+  }]).then(function (choices) {
     //   if (choices){
     //     return (addEmployee())
     // }
-    switch (choices.value){
+    switch (choices.value) {
       case "addEmployee":
         addEmployee();
         break;
       default:
         console.log("that was not an option.")
     }
-    })
-  }
+  })
+}
 
-  init();
+init();
 

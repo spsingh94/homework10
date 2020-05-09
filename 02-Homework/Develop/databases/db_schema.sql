@@ -1,6 +1,4 @@
--- seed file created to creating database easier
-
--- figure out how to add other keys into other tables
+-- schema made to make representation of database
 
 DROP DATABASE IF EXISTS employee_db;
 CREATE DATABASE employee_db;
